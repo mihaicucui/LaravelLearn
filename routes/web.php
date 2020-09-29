@@ -29,6 +29,7 @@ Route::get('/', function () {
 //    return view('test', ['test'=>$tests[$number] ?? abort(404,'Sorry the page does not exist')]);
 //});
 
+
 Route::get('test/{number}', 'MyFirstController@show');
 
 Route::get('/articles', 'ArticlesController@index');
@@ -36,7 +37,7 @@ Route::post('/articles', 'ArticlesController@store');
 Route::get('/articles/create','ArticlesController@create');
 Route::get('/articles/{article}', 'ArticlesController@show');
 Route::get('/articles/{article}/edit','ArticlesController@edit');
-Route::put('/articles/{article}','ArticlesController@update');
+Route::put('/articles/{article}','ArticlesController@update'); //put is used for update
 
 Route::get('/projects/','ProjectsController@index');
 Route::get('/projects/{project}','ProjectsController@show');

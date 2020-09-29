@@ -27,7 +27,7 @@ class ArticlesController extends Controller
     public function store()
     {
         \request()->validate([
-            'title'=>['required', 'min:2'],
+            'title'=>['required', 'min:3'],
             'body'=>'required'
         ]);
         $article = new Article();
